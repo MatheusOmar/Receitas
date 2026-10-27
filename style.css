@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+header h1 {
+  font-size: 26px;
+}
+header p {
+  color: #666;
+}
+
+/* MENU ANTIGO  */
+nav ul {
+  list-style: none;
+  max-width: 400px;
+  margin: 0 auto;
+}
+nav li {
+  margin-bottom: 12px;
+}
+nav a {
+  display: block;
+  padding: 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+nav a:hover {
+  background: #333;
+  color: white;
+}
+
+/* GRID DE RECEITAS COM IMAGEM CLICÁVEL */
+.receitas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  text-decoration: none;
+  color: #333;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #333;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-imagem {
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.card:hover .card-imagem img {
+  transform: scale(1.05);
+}
+
+.card-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.card-info h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.card-info p {
+  font-size: 13px;
+  color: #888;
+}
+
+/* PÁGINA RECEITA */
+.receita {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+figure {
+  margin-bottom: 20px;
+}
+figure img {
+  width: 100%;
+  border-radius: 10px;
+}
+figcaption {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+section h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  border-left: 4px solid #ff1a1a;
+  padding-left: 8px;
+}
+section ul,
+section ol {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.voltar {
+  display: inline-block;
+  margin-top: 15px;
+  color: #ff1a1a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* RESPONSIVO CELULAR */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .receita {
+    padding: 15px;
+  }
+  .receitas-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-imagem {
+    height: 200px;
+  }
+}
+
+/* DESTAQUE - PREENCHE O BRANCO */
+.destaque {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  overflow: hidden;
+}
+
+.destaque-texto {
+  padding: 35px;
+}
+
+.destaque-texto span {
+  background: #fff0f0;
+  color: #ff1a1a;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.destaque-texto h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.destaque-texto p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.stats div {
+  text-align: left;
+}
+
+.stats strong {
+  display: block;
+  font-size: 20px;
+  color: #ff1a1a;
+}
+
+.stats div {
+  font-size: 12px;
+  color: #888;
+}
+
+.destaque-imagem {
+  height: 100%;
+}
+
+.destaque-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 20px;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #ff1a1a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .destaque {
+    grid-template-columns: 1fr;
+  }
+  .destaque-imagem {
+    height: 220px;
+    order: -1;
+  }
+}
